@@ -5,10 +5,10 @@
   "license": "ISC",
   "author": "",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon index",
-    "dev": "nodemon index"
+    "start": "nodemon app",
+    "dev": "nodemon app"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",

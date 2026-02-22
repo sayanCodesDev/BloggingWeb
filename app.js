@@ -9,7 +9,7 @@ const userAuthRouter=require("./routes/authRoute");
 
 const addblogRouter=require("./routes/blog");
 
-const port=3000;
+const PORT=process.env.PORT ;
 const app=express();
 
 app.set("view engine", "ejs");
@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(express.static("public"));
 
 //Connection
-connectToMongodb("mongodb://127.0.0.1:27017/blogify")
+connectToMongodb("process.env.MONGO_URL")
     .then(()=> console.log("MongoDb Connected")
 );
 
@@ -37,6 +37,6 @@ app.use(checkForAuthentication);
 
 app.use("/", addblogRouter);
 
-app.listen(port,()=>{
+app.listen(PORT,()=>{
     console.log(`Server is running on port ${port}`);
 });
