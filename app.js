@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express');
 const {connectToMongodb}=require("./connect");
 
@@ -20,7 +22,7 @@ app.use(cookieParser());
 app.use(express.static("public"));
 
 //Connection
-connectToMongodb("process.env.MONGO_URL")
+connectToMongodb(process.env.MONGO_URL)
     .then(()=> console.log("MongoDb Connected")
 );
 
@@ -38,5 +40,5 @@ app.use(checkForAuthentication);
 app.use("/", addblogRouter);
 
 app.listen(PORT,()=>{
-    console.log(`Server is running on port ${port}`);
+    console.log(`Server is running on port ${PORT}`);
 });
