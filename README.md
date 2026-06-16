@@ -25,44 +25,44 @@ A full-stack blogging platform built with Node.js, Express, and MongoDB, where u
 
 ## 📂 Project Structure
 
-BloggingWeb/
-├── app.js                    # App entry point — sets up Express, EJS, DB, routes
-├── connect.js                # MongoDB connection (mongoose.connect)
-├── package.json
-│
-├── controllers/
-│   ├── authControl.js        # handleUserSignup, handleUserLogin
-│   └── index.js              # handleBlogSubmission
-│
-├── middlewares/
-│   └── auth.js               # checkForAuthentication — verifies JWT cookie
-│
-├── services/
-│   └── authen.js             # setUser (sign JWT), getUser (verify JWT)
-│
-├── models/
-│   ├── userAuth.js           # User schema (bcrypt password hashing, role, profilePicture)
-│   └── blog.js               # Blog schema (title, body, thumbnailUrl, createdBy)
-│
-├── routes/
-│   ├── authRoute.js          # /signup, /login, /logout
-│   └── blog.js               # /home, /add-blog, /showMyBlogs, /blog/:id
-│
-├── views/
-│   ├── home.ejs
-│   ├── login.ejs
-│   ├── signup.ejs
-│   ├── addBlog.ejs
-│   ├── blogDetails.ejs
-│   ├── showMyBlogs.ejs
-│   └── partials/
-│       ├── head.ejs
-│       ├── nav.ejs
-│       └── scripts.ejs
-│
-└── public/
-    ├── images/               # default profile picture, etc.
-    └── uploads/              # user-uploaded blog thumbnails (via Multer)
+BloggingWeb/<br>
+├── app.js                    # App entry point — sets up Express, EJS, DB, routes<br>
+├── connect.js                # MongoDB connection (mongoose.connect)<br>
+├── package.json<br>
+│<br>
+├── controllers/<br>
+│   ├── authControl.js        # handleUserSignup, handleUserLogin<br>
+│   └── index.js              # handleBlogSubmission<br>
+│<br>
+├── middlewares/<br>
+│   └── auth.js               # checkForAuthentication — verifies JWT cookie<br>
+│<br>
+├── services/<br>
+│   └── authen.js             # setUser (sign JWT), getUser (verify JWT)<br>
+│<br>
+├── models/<br>
+│   ├── userAuth.js           # User schema (bcrypt password hashing, role, profilePicture)<br>
+│   └── blog.js               # Blog schema (title, body, thumbnailUrl, createdBy)<br>
+│<br>
+├── routes/<br>
+│   ├── authRoute.js          # /signup, /login, /logout<br>
+│   └── blog.js               # /home, /add-blog, /showMyBlogs, /blog/:id<br>
+│<br>
+├── views/<br>
+│   ├── home.ejs<br>
+│   ├── login.ejs<br>
+│   ├── signup.ejs<br>
+│   ├── addBlog.ejs<br>
+│   ├── blogDetails.ejs<br>
+│   ├── showMyBlogs.ejs<br>
+│   └── partials/<br>
+│       ├── head.ejs<br>
+│       ├── nav.ejs<br>
+│       └── scripts.ejs<br>
+│<br>
+└── public/<br>
+    ├── images/               # default profile picture, etc.<br>
+    └── uploads/              # user-uploaded blog thumbnails (via Multer)<br>
 
 
 
