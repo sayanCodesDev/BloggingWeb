@@ -25,7 +25,6 @@ A full-stack blogging platform built with Node.js, Express, and MongoDB, where u
 
 ## 📂 Project Structure
 
-\```
 BloggingWeb/
 ├── app.js                      # App entry point — sets up Express, EJS, DB, routes
 ├── connect.js                  # MongoDB connection (mongoose.connect)
@@ -64,7 +63,7 @@ BloggingWeb/
 └── public/
     ├── images/                  # default profile picture, etc.
     └── uploads/                 # user-uploaded blog thumbnails (via Multer)
-\```
+
 
 
 ## 🚀 Getting Started
