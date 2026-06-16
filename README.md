@@ -23,6 +23,49 @@ A full-stack blogging platform built with Node.js, Express, and MongoDB, where u
 
 ## 📂 Project Structure
 
+## 📂 Project Structure
+
+\```
+BloggingWeb/
+├── app.js                      # App entry point — sets up Express, EJS, DB, routes
+├── connect.js                  # MongoDB connection (mongoose.connect)
+├── package.json
+│
+├── controllers/
+│   ├── authControl.js          # handleUserSignup, handleUserLogin
+│   └── index.js                # handleBlogSubmission
+│
+├── middlewares/
+│   └── auth.js                 # checkForAuthentication — verifies JWT cookie
+│
+├── services/
+│   └── authen.js                # setUser (sign JWT), getUser (verify JWT)
+│
+├── models/
+│   ├── userAuth.js              # User schema (bcrypt password hashing, role, profilePicture)
+│   └── blog.js                  # Blog schema (title, body, thumbnailUrl, createdBy)
+│
+├── routes/
+│   ├── authRoute.js             # /signup, /login, /logout
+│   └── blog.js                  # /home, /add-blog, /showMyBlogs, /blog/:id
+│
+├── views/
+│   ├── home.ejs
+│   ├── login.ejs
+│   ├── signup.ejs
+│   ├── addBlog.ejs
+│   ├── blogDetails.ejs
+│   ├── showMyBlogs.ejs
+│   └── partials/
+│       ├── head.ejs
+│       ├── nav.ejs
+│       └── scripts.ejs
+│
+└── public/
+    ├── images/                  # default profile picture, etc.
+    └── uploads/                 # user-uploaded blog thumbnails (via Multer)
+\```
+
 
 ## 🚀 Getting Started
 
